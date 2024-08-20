@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <form>
+    <p>Favorite Browser :
+      <select id="browser">
+        <option>--선택--</option>
+        <option value="chrome">Google Chrome</option>
+        <option value="firefox">Mozillar Firefox</option>
+        <option value="safari">Apple Safari</option>
+        <option value="opera">Opera opera</option>
+        <option value="edge">Microsoft Edge</option>
+      </select>
+    </p>
+    <p>
+      Reservation Date : <input type="date" id="regdate" />
+    </p>
+    <p><textarea id="comment" cols="40" rows="7" placeholder="남기실 말씀..."></textarea></p>
+    <p><button type="button">전송하기</button></p>
+  </form>
+  <script>
+    const button = document.querySelector('button').addEventListener('click', () => {
+      let browser = document.querySelector('#browser').value;
+      let regdate = document.querySelector('#regdate').value;
+      let comment = document.querySelector('#comment').value;
+      let result = `귀하가 좋아하시는 브라우져 : ${browser} \n 
+귀하가 예약한 날짜는 ${regdate} \n
+귀하가 남기신 말씀은 ${comment} 입니다.`;
+      console.log(result);
+    });
+    
+ 
+  </script>
+</body>
+</html>

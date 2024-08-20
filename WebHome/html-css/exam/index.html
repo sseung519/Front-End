@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>계산 퀴즈</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="main">
+      <div class="quiz">  
+      <form>
+          <fieldset class="fieldset">
+          <legend><h2>계산 퀴즈</h2></legend>
+          <p>이름과 계산의 답을 입력 한 후 완료 단추를 눌러주세요.</p>
+          <div class="namediv">
+            <label for="name">이름 : </label>
+            <input type="text" name="name" class="nameInput">
+          </div>
+            <ol>
+                <li>
+                    <span>5 + 6 =</span>
+                    <input type="number" >
+                </li>
+                <li>
+                    <span>8 - 3 =</span>
+                    <input type="number" >
+                </li>
+                <li>
+                    <span>7 x 6 =</span>
+                    <input type="number" >
+                </li>
+                <li>
+                    <span>15 ÷ 3 =</span>
+                    <input type="number" >
+                </li>
+                <li>
+                    <span>8 + 6 - 3 x 2 ÷ 2 =</span>
+                    <input type="number">
+                </li>
+            </ol>
+            
+            <input type="button" value="완료" id="submitButton">
+          </fieldset>
+        </form>
+    </div>
+    <div class="result">
+      <fieldset class="fieldset resultmessage">
+          
+      </fieldset>
+    </div>
+  </div>
+  <script src="js/index.js"></script>
+</body>
+</html>

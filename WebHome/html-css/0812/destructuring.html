@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>Destructuring</h1>
+  <script>
+    // const student = {
+    //   name: '씅찬',
+    //   age: 30,
+    //   address: '경기도 수원시 영통구 인계로 254'
+    // }
+    // const {name, age, address} = student;
+    // console.log(`name= ${name}, age= ${age}, address= ${address}`);
+    // const array = [1,2,3,4,5];
+    // const [a, ...b] = array;
+    // const[,, ...c] = array;
+    // console.log(a, b, c);
+
+    //Default Parameter와 연동하기
+    // const [a = 10, b = 20] = [undefined, 5];
+    // console.log(a,b);
+    // const [c, d = c * 2] = [5];
+    // console.log(c, d);
+
+    //Swapping
+    //ES5
+    // var a = 10; var b = 20;
+    // var c = b;   b = a;   a = c;
+    // console.log(a, b);
+
+    //ES6
+    // let a = 10;   let b = 20;
+    // [a, b] = [b, a];
+    // console.log(a, b);
+
+    // function func([a, b, c = a + b]) {
+    //   console.log(a, b, c);
+    // }
+    // func([100, 200]);
+
+    // function func({a, b, c = a + b}){
+    //   console.log(a, b, c)
+    // }
+    // func({a:100, b:200})
+
+    //Destructuring을 배열이나 객체로 전달하고자 할 때, 
+    //반드시 배열은 배열로, 객체는 객체로 전달 받아야 한다.
+    //객체의 해체 기준은 key 기준이다. 배열은 index 기준이다.
+
+    // const {x, ...rest} = {x:1, y:2, z:3};
+    // console.log(x);
+    // console.log(rest);
+
+    const user = {
+      firtName: '씅',
+      lastName: '찬'
+    }
+    const {firtName, lastName} = user;
+    // console.log(user.firtName, user.lastName);
+    // console.log(firtName, lastName);
+
+    const student = {
+      name: '씅찬',
+      address: {
+        zipcode: '12345',
+        city: 'Seoul'
+      }
+    }
+    const {address: {city}} = student;
+    // console.log(city);
+
+    // const printUser = (user) => {
+    //   console.log(user.name);
+    // }
+    // printUser({id: 'sseung', name: '씅찬'});
+
+    const printUser = ({name}) => {
+      console.log(name);
+    }
+    printUser({id: 'sseung', name: '씅찬'});
+  </script>
+</body>
+</html>

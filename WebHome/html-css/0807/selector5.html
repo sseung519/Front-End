@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Attribute Selector</title>
+  <style>
+  /* a[href] {color: red;} */
+  a[href="https://www.nate.com"]{color: red;}
+  a[href^="ftp"]{color: green;}
+  /* a[href$="443"]{color: pink;} */
+  a[href*="naver"] {color:pink;}
+  </style>
+</head>
+<body>
+  <h1>Search Engine</h1>
+  <ul>
+    <li><a href="https://www.naver.com:443">Naver</a></li>
+    <li><a href="ftp://www.google.com:21">Google</a></li>
+    <li><a href="https://www.nate.com">Nate</a></li>
+    <li><a name="daum">Daum</a></li>
+  </ul>
+  <div>
+    <button><a href="/0807">8월 7일 Home</a></button>
+  </div>
+</body>
+</html>

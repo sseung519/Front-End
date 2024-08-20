@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    const name = '씅찬';
+    function myFunc(name){ //Declarative/Static Function
+      return `이름 : ${name}`;
+    }
+    const myFunc1 = (name) => {
+      return `이름 : ${name}`;
+    }
+
+    // const myFunc2 = (name) => `이름 : ${name}`;
+    // console.log(myFunc(name));
+    // console.log(myFunc1(name));
+    // console.log(myFunc2(name));
+    // const get = param => ({sports : '축구'});
+    // const result = get;
+    // console.log(result());
+
+    // const person = function(name) {
+    //   return {
+    //     getName: function() {
+    //       return name;
+    //     }
+    //   }
+    // }('씅찬');
+    const person = ((name) => {
+      return {
+        getName : function(){
+          return name;
+        }
+      }
+    })('씅찬');
+    console.log(typeof person);
+    console.log(person.getName());
+  </script>
+</body>
+</html>
